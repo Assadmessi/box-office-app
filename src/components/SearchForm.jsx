@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { useSearchStr } from '../lib/useSearchStr';
 
 const SearchForm = ({ onSearch }) => {
-  const [searchStr, setSerarchStr] = useState('');
+  const [searchStr, setSerarchStr] = useSearchStr('');
   const [searchOption, setSearchOption] = useState('shows');
   const onSearchInputChange = ev => {
     setSerarchStr(ev.target.value);
